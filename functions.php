@@ -10,6 +10,8 @@
  
  function univerity_features(){
     register_nav_menu( 'headerMenuLocation', 'Header Menu Location' );
+    register_nav_menu( 'footerLocation1', 'Footer Location One' );
+    register_nav_menu( 'footerLocation2', 'Footer Location Two' );
     add_theme_support( 'title-tag');
  }
  add_action('after_setup_theme', 'univerity_features');
