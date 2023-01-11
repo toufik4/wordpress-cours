@@ -35,7 +35,7 @@
           <h2 class="headline headline--small-plus t-center">From Our Blogs</h2>
           <?php 
           $query = new WP_Query(array(
-            'category_name' => 'test'
+            'posts_per_page' => 2
 
           ));
           while($query->have_posts()){ $query->the_post();?>
@@ -46,7 +46,7 @@
             </a>
             <div class="event-summary__content">
               <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink();?>"><?php the_title();?></a></h5>
-              <p>For the 100th year in a row we are voted #1. <a href="#" class="nu gray">Read more</a></p>
+              <p><?php the_excerpt();?> <a href="#" class="nu gray">Read more</a></p>
             </div>
           </div>
           <?php }?>
