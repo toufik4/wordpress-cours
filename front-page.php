@@ -35,7 +35,7 @@
           <h2 class="headline headline--small-plus t-center">From Our Blogs</h2>
           <?php 
           $query = new WP_Query(array(
-            'post_type' => 'page'
+            'category_name' => 'test'
 
           ));
           while($query->have_posts()){ $query->the_post();?>
